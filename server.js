@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 // START LISTENING
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });
 
