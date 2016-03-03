@@ -1,0 +1,35 @@
+{
+  "name": "node-sock-chat",
+  "version": "1.0.0",
+  "description": "A messenger app built in node.js using socket.io",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cscholze/node-sock-chat.git"
+  },
+  "author": "Caleb Scholze <jcsdevel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cscholze/node-sock-chat/issues"
+  },
+  "homepage": "https://github.com/cscholze/node-sock-chat#readme",
+  "devDependencies": {
+    "eslint": "^2.2.0",
+    "nodemon": "^1.9.1"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "eslintConfig": {
+    "env" : {
+      "browser": true,
+      "node": true,
+      "es6": true
+    }
+  }
+}
