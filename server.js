@@ -5,6 +5,8 @@ const app = express();
 const server = require('http').createServer(app);
 const ws = require('socket.io')(server);
 
+
+// APP ENVIRONMENT VARIABLES
 const PORT = process.env.PORT || 3000;
 
 // SETUP VIEW ENGINE
@@ -29,6 +31,6 @@ ws.on('connection', socket => {
 
   socket.on('sendChat', (msg) => {
     console.log('sending msg', msg);
-    ws.emit('receiveChat', msg);
+    socket.broadcast.emit('receiveChat', msg);
   });
 });

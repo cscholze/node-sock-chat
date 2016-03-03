@@ -4,7 +4,7 @@
   const ws = io.connect();
 
   ws.on('connection', socket => {
-    console.log('socket connected >>>> \n', socket);
+    console.log('socket connected');
   });
 
   ws.on('receiveChat', msg => {
@@ -18,12 +18,15 @@
 
   const lis = document.querySelectorAll('li');
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', event => {
     // ALERT IS NO USERNAME PRESENT
     if (!name.value) {
       alert('Please enter a user name!');
       return false;
     };
+
+    // DISPLAY USER CHAT ON DOM
+    displayChat(name.value, text.value);
 
     // EMIT EVENT TO WEBSOCKET
     ws.emit('sendChat', {
