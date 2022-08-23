@@ -27,7 +27,7 @@
     "express": "^4.13.4",
     "jade": "^1.11.0",
     "pg": "4.5.1",
-    "pg-native": "1.10.0",
+    "pg-native": "3.0.1",
     "socket.io": "^1.4.5"
   },
   "eslintConfig": {
